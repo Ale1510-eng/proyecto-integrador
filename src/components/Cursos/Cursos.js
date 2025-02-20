@@ -6,21 +6,21 @@ const Cursos = () => {
 
     //Hay que descomentar este useEffect y eliminar el otro cuando ya tengamos la API
 
-    // useEffect(() => {
-    //     fetch('https://api') // Hay que reemplazar por la API a utilizar
-    //         .then(response => {
-    //             if (!response.ok) throw new Error('Error al obtener los cursos');
-    //             return response.json();
-    //         })
-    //         .then(data => {
-    //             setCursos(data); // Se espera un array con la estructura proporcionada
-    //             setLoading(false);
-    //         })
-    //         .catch(error => {
-    //             console.error('Error:', error);
-    //             setLoading(false);
-    //         });
-    // }, []);
+     useEffect(() => {
+         fetch("/cursos/cursos.json") // Hay que reemplazar por la API a utilizar
+             .then(response => {
+                 if (!response.ok) throw new Error('Error al obtener los cursos');
+                 return response.json();
+             })
+             .then(data => {
+                 setCursos(data); // Se espera un array con la estructura proporcionada
+                 setLoading(false);
+             })
+             .catch(error => {
+                 console.error('Error:', error);
+                 setLoading(false);
+             });
+     }, []);
 
     useEffect(() => {
         const mockCursos = [
