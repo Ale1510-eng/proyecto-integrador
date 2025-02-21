@@ -50,7 +50,7 @@ const Cursos = () => {
                                     className="card-img-top" 
                                     alt={curso.TITULO} 
                                 />
-                                <div className="card-body d-flex flex-column">
+                                <div className="card-body d-flex flex-column text-white">
                                     <h5 className="card-title">{curso.TITULO}</h5>
                                     <p className="card-text">{curso.DESCRIPCION}</p>
                                     <ul className="list-unstyled mt-3">
